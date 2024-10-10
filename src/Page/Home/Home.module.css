@@ -1,0 +1,9 @@
+.main {
+    width: 100vw;  /* Full width of the viewport */
+    background-color: black; /* Background color */
+    overflow-x: hidden;
+    overflow-y: hidden;
+    /* Optional: Center content if desired */
+    /* display: flex; */
+    
+}

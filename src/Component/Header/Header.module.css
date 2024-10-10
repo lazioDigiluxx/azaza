@@ -1,0 +1,30 @@
+.header_main {
+    position: relative;
+    height: 97vh;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: hidden; /* To prevent content overflow */
+}
+
+/* Style for the video to act as a background */
+.background_video {
+    position: absolute;
+    top: 1%;
+    left: 20%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures video covers the entire container without distortion */
+    /* Places the video behind other content */
+}
+
+.left, .right {
+    z-index: 1; /* Ensures content stays above the video */
+    color: white; /* Adjust content color to contrast with the video */
+    position: relative;
+    width: 50%;
+    text-align: center;
+}

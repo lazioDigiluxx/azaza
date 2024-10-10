@@ -1,0 +1,38 @@
+.nav {
+    background-color: goldenrod;
+    width: 100%;
+    height: 10vh; /* Set to viewport height for better responsiveness */
+    display: flex;
+    justify-content: center; /* Center all the content horizontally */
+}
+
+.navList {
+    display: flex;
+    justify-content: space-around; /* Evenly distribute items horizontally */
+    align-items: center; /* Vertically center items */
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.navList li {
+    text-align: center;
+    padding: 0 20px; /* Space around list items */
+}
+
+.navLink {
+    color: black; /* Set all nav links to red */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Add pointer on hover */
+}
+
+.navLink:hover {
+    color: white; /* Change color on hover */
+}
+
+.navList img {
+    width: 100px; /* Adjust logo size */
+    height: 100px;
+    padding-right: 20px; /* Add some space to the right of the logo */
+}
