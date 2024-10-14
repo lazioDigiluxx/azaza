@@ -1,0 +1,43 @@
+/* src/components/Parallax.module.css */
+.parallaxContainer {
+    position: relative;
+    height: 30vh;
+    width: 30%;
+    overflow: hidden;
+    perspective: 1000px; /* Add perspective for 3D effect */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black; /* Change background color */
+}
+
+.parallaxLayer {
+    position: relative;
+ 
+    transform: translate(-50%, -50%); /* Center the content */
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.parallaxImage {
+    width: 100%; /* Full width */
+    height: 100px;
+    border-radius: 12px; /* Optional: round corners */
+}
+
+.textContainer {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center text over image */
+    color: white; /* Text color */
+    text-align: center;
+}
+
+h1 {
+    font-size: 3rem;
+    margin: 0; /* Remove default margin */
+}
+
+p {
+    font-size: 1.5rem;
+    margin-top: 10px; /* Add space between title and paragraph */
+}
