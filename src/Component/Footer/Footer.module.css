@@ -1,0 +1,128 @@
+.footerMain {
+  width: 100%;
+  padding: 50px 0;
+  background-color: #333;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footerContent {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.firstFooter,
+.secondFooter,
+.thirdFooter {
+  flex: 1;
+  padding: 20px;
+}
+
+.logoContainer {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.logoImg {
+  width: 120px;
+  height: auto;
+}
+
+.logoImg {
+    width: 120px;
+    height: auto;
+  }
+  
+.socialMedia ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 20px;
+}
+
+.socialMedia ul li a {
+  color: white;
+  font-size: 24px;
+  transition: color 0.3s ease;
+}
+
+.socialMedia ul li a:hover {
+  color: red;
+}
+
+.secondFooter h4,
+.thirdFooter h4 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: red;
+}
+
+.secondFooter ul,
+.thirdFooter ul {
+  list-style: none;
+  padding: 0;
+}
+
+.secondFooter ul li,
+.thirdFooter p {
+  color: #bbb;
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 8px;
+}
+
+.bottomFooter {
+  width: 100%;
+  text-align: center;
+  background-color: #222;
+  padding: 15px 0;
+  color: #bbb;
+  font-size: 14px;
+  border-top: 1px solid #444;
+}
+
+.bottomFooter p {
+  margin: 0;
+}
+.whatsapp_fix_img {
+  width: 50%;
+  position: absolute;
+  border-radius: 50%;
+  font-size: 50px !important;
+  animation: pulse 2s infinite;
+}
+.call_fix_img{
+    width: 50%;
+    position: absolute;
+    border-radius: 50%;
+    font-size: 50px !important;
+    animation: pulse 2s infinite;
+}
+.w_app{
+    /* background-color: #e4e4e4; */
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    width: 135px;
+    height: 38px;
+    position: fixed;
+    bottom: 10%;
+    left:0;
+  }
+
+  .callButton{
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    width: 135px;
+    height: 38px;
+    position: fixed;
+    bottom: 20%;
+    /* right:-50px; */
+    left: 0;
+  }
