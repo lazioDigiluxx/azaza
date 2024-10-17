@@ -5,6 +5,7 @@ import NavBar from '../../Component/NavBar/NavBar'
 import AboutUs from '../AboutUs/AboutUs'
 import Footer from '../../Component/Footer/Footer'
 import Service from '../Services/Service'
+import Project from '../../Component/Projectidea/Project'
 const Home = () => {
   return (
     <div className={styles.main}>
@@ -12,6 +13,7 @@ const Home = () => {
         <Header/>
         <AboutUs/>
         <Service/>
+        <Project/>
         <Footer/>
     </div>
    

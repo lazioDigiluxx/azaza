@@ -15,15 +15,15 @@ const AboutUs = () => {
 
   return (
     <div className={styles.aboutUsMain}>
-      <img src={logo} alt="Company Logo" className={styles.logoImg} />
+      {/* <img src={logo} alt="Company Logo" className={styles.logoImg} /> */}
       {/* <NavBar />  */}
       <div className={styles.heroSection}>
         <h1 className={styles.heading}>
-        <div className={styles.logoContainer}>
-          </div>
+      
           <span className={styles.line1}>We Grow Brands,</span>
           <span className={styles.line2}>Create Experience,</span>
           <span className={styles.line3}>Solve Business Problems</span>
+        
         </h1>
         <p className={styles.subText}>
           Empowering businesses with cutting-edge digital solutions and strategies.
@@ -35,7 +35,7 @@ const AboutUs = () => {
           <Card key={index} text={text} index={index} />
         ))}
         <button>
-          <span role="img" aria-label="explore">🔍</span>
+          <span role="img" aria-label="explore">Explore</span>
         </button>
       </div>
       {/* <Footer/> */}

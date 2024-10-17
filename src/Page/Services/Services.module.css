@@ -2,4 +2,116 @@
     width: 100%;
     height: 96vh;
     background-color: black;
+    text-align: left;
+    /* display: flex; */
+}
+.mainService p{
+    color: white;
+    padding-left: 20%;
+}
+.mainServicesub{
+    padding-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+.mainService h1 {
+    padding-left: 10%; /* Maintain left padding */
+    color: white; /* Ensure the text color is white */
+    padding-top: 70px; /* Maintain top padding */
+    font-size: 2.5rem; /* Increase font size for better visibility */
+    animation: moveText 0.5s ease-in-out forwards; /* Add animation */
+    opacity: 0; /* Start with invisible text */
+}
+
+.movingText.show {
+    opacity: 1; /* Fade in when shown */
+}
+
+p {
+    max-width: 600px; /* Adjust the width for better readability */
+    line-height: 1.8; /* Increase line spacing */
+    margin: 20px 0; /* Add margin for spacing */
+    font-size: 1.2rem; /* Adjust font size for better readability */
+    color: #555; /* Customize text color for a more professional look */
+    text-align: justify; /* Optional: Align text for a neat look */
+}
+.servicelist{
+    width: 100%;
+    /* height: 98vh; */
+    /* background-color: white; */
+}
+
+.left{
+    width: 30%;
+}
+
+li{
+    list-style: none;
+    color: white;
+text-align: center;}
+/* Services.module.css */
+/* .mainService {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  } */
+  
+  .servicelist {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10%;
+  }
+  
+  .left ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .left li {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ddd;
+    margin-bottom: 5px;
+    transition: background-color 0.3s;
+  }
+  
+  .left li:hover {
+    background-color: #f0f0f0;
+    color: goldenrod;
+   
+  }
+  
+  .active {
+    background-color: #dcdcdc;
+  }
+  
+  .right {
+    /* margin-left: 20px; */
+    width: 70%;
+    height: 500%;
+  }
+  
+  .serviceDetails {
+    padding: 20px;
+    border: 1px solid #ddd;
+  }
+  @keyframes moveText {
+    0% {
+        transform: translateX(100%); /* Start from the right */
+    }
+    100% {
+        transform: translateX(0); /* End at the original position */
+    }
+}
+
+.movingText {
+    display: inline-block; /* Make it an inline-block for smoother animation */
+    animation: moveText 0.5s ease-in-out forwards; /* Animation properties */
+    opacity: 0; /* Start with invisible text */
+    animation-fill-mode: forwards; /* Keep the final state after animation */
+    color: white;
+}
+
+.movingText.show {
+    opacity: 1; /* Fade in when shown */
 }

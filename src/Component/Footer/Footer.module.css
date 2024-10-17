@@ -52,14 +52,14 @@
 }
 
 .socialMedia ul li a:hover {
-  color: red;
+  color: white;
 }
 
 .secondFooter h4,
 .thirdFooter h4 {
   font-size: 18px;
   margin-bottom: 10px;
-  color: red;
+  color: white;
 }
 
 .secondFooter ul,
@@ -87,6 +87,7 @@
 }
 
 .bottomFooter p {
+    text-align: center;
   margin: 0;
 }
 .whatsapp_fix_img {
@@ -108,10 +109,11 @@
     border-radius: 15px;
     display: flex;
     align-items: center;
-    width: 135px;
+    width: 115px;
     height: 38px;
     position: fixed;
-    bottom: 10%;
+    bottom: 14%;
+    z-index: 999;
     left:0;
   }
 
@@ -119,10 +121,11 @@
     border-radius: 15px;
     display: flex;
     align-items: center;
-    width: 135px;
+    width: 115px;
     height: 38px;
     position: fixed;
     bottom: 20%;
+    z-index: 999;
     /* right:-50px; */
     left: 0;
   }

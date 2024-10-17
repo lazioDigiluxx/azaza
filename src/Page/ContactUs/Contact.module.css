@@ -1,123 +1,159 @@
 .main {
-    display: flex;
-    justify-content: space-between;
-    padding: 50px;
-    font-family: Arial, sans-serif;
-    background-color: black;
-    width: 100%;
-    height: 98vh;
-  }
-  
-  .contact {
-    width: 40%;
-  }
-  
-  .contact h1 {
-    font-size: 48px;
-    font-weight: bold;
-  }
-  
-  .contact p {
-    margin: 20px 0;
-  }
-  
-  .contact h3 {
-    margin-top: 30px;
-    font-weight: normal;
-  }
-  
-  .contact a {
-    color: #007BFF;
-    text-decoration: none;
-  }
-  
-  .contact address {
-    margin-top: 20px;
-    font-style: normal;
-    line-height: 1.6;
-  }
-  
-  .right {
-    width: 55%;
-  }
-  
-  .right h3 {
-    margin-bottom: 20px;
-  }
-  
-  .contact_form {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-gap: 20px;
-  }
-  
-  .form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .form textarea {
-    grid-column: span 2;
-  }
-  
-  .form input,
-  .form textarea {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .send_button {
-    grid-column: span 2;
-    padding: 15px;
-    background-color: #007BFF;
-    color: white;
-    border: none;
-    border-radius: 50px;
-    font-size: 16px;
-    cursor: pointer;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
-  .send_button:hover {
-    background-color: #0056b3;
-  }
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+  font-family: Arial, sans-serif;
+  background-color: black;
+  height: 98vh;
+  width: 100%;
+  box-sizing: border-box; 
+}
 
+.contact {
+  width: 40%;
+  color: white; 
+}
 
-  @keyframes slideIn {
-    from {
-      transform: translateX(-100%);
-      opacity: 0;
-    }
-    to {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  
-  .contact h1, 
-  .contact p, 
-  .contact h3, 
-  .contact a, 
-  .contact address {
-    animation: slideIn 0.5s ease forwards;
-    opacity: 0; 
-  }
-  
+.contact h1, 
+.contact p, 
+.contact h3, 
+.contact a, 
+.contact address {
+  animation: slideIn 0.5s ease forwards;
+  opacity: 0; 
+  color: white; 
+}
+
+.contact h1 {
+  font-size: 48px;
+  font-weight: bold;
+  animation-delay: 0.2s;
+}
+
+.contact p {
+  margin: 20px 0;
+  animation-delay: 0.4s;
+}
+
+.contact h3 {
+  margin-top: 30px;
+  font-weight: normal;
+  animation-delay: 0.6s;
+}
+
+.contact a {
+  color: #007BFF;
+  text-decoration: none;
+  animation-delay: 0.8s;
+}
+
+.contact address {
+  margin-top: 20px;
+  font-style: normal;
+  line-height: 1.6;
+  animation-delay: 1s;
+}
+
+.right {
+  width: 55%;
+  background-color: rgb(68, 67, 67);
+  text-align: center;
+  width: 50%;
+  height: 500px;
+}
+
+.right h3 {
+  /* margin-bottom: 40px; */
+  color: white; 
+  padding-top: 10px;
+}
+
+.contact_form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1;
+  /* justify-content: center; */
+ padding-left: 200px;
  
+}
+.contact_form button{
+  margin-left: 100px;
+}
+.form_group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_group label {
+  margin-bottom: 5px; 
+}
+
+.form_group textarea,
+
+.form_group input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%; 
+  box-sizing: border-box; 
+}
+
+.send_button {
+  grid-column: span 2;
+  padding: 8px 12px; 
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 8px; 
+  font-size: 12px;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 0.5px; 
+  margin-top: 10px; 
+  width: 20%;
+}
+
+.send_button:hover {
+  background-color: #0056b3;
+}
+
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+@media (max-width: 1024px) {
+  .main {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .contact, .right {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
   .contact h1 {
-    animation-delay: 0.2s;
+    font-size: 36px;
   }
-  .contact p {
-    animation-delay: 0.4s;
+  .contact_form {
+    grid-template-columns: 1fr;
   }
-  .contact h3 {
-    animation-delay: 0.6s;
+}
+
+@media (max-width: 480px) {
+  .contact h1 {
+    font-size: 30px;
   }
-  .contact a {
-    animation-delay: 0.8s;
+  .main {
+    padding: 10px;
   }
-  .contact address {
-    animation-delay: 1s;
-  }
+}

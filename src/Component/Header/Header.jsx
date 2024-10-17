@@ -11,30 +11,32 @@ const Header = () => {
         <source src={backgroundVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+       <p>azaza</p>
       <div className={styles.left}>
+      
         <h1>
-          One-Stop Solutions for{" "}
-          <br/>
-          <span style={{ display: "inline-block" }}> 
+        One-Stop Solutions for 
+         
+          <br/><span style={{ display: "inline-block" }}>
             <TypeAnimation
               sequence={[
-                'Website',
+                "Web Development",
                 1000,
-                'Digital Marketing',
+                "Graphic designing",
                 1000,
-                'SEO',
+                "SEO",
                 1000,
-                'Email Marketing',
-                1000
+                "Social Media Marketing",
+                1000,
               ]}
-              style={{ fontSize: '1.5em', marginLeft: '10px', color: "white" }} 
+              style={{ fontSize: "1.5em", marginLeft: "10px", color: "white" }}
               repeat={Infinity}
             />
-          </span>{" "}
+          </span>{" "}<br/>
           Needs!!
         </h1>
       </div>
-      <div className={styles.right}>
+      {/* <div className={styles.right}>
         <button>
           <MovingComponent
             type="slideInFromLeft"
@@ -77,7 +79,23 @@ const Header = () => {
             Digital Marketing Solutions
           </MovingComponent>
         </button>
+      </div> */}
+
+      <div className={styles.wrapper}>
+        <a href="#">Explore Us</a>
       </div>
+
+      {/* Marquee Text */}
+      <div className={styles.marquee}>
+        <span>
+          Digital Marketing &nbsp; | &nbsp; Web Solutions &nbsp; | &nbsp; SEO |
+          Digital Marketing &nbsp; | &nbsp; Web Solutions &nbsp; | &nbsp; SEO
+          Digital Marketing &nbsp; | &nbsp; Web Solutions &nbsp; | &nbsp; SEO|
+          Digital Marketing &nbsp; | &nbsp; Web Solutions &nbsp; | &nbsp; SEO
+          Solutions
+        </span>
+      </div>
+      
     </div>
   );
 };

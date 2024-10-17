@@ -8,7 +8,7 @@
     position: relative;
     height: 97vh;
     width: 100%;
-    display: flex;
+    /* display: flex; */
     justify-content: space-between;
     align-items: center;
     padding: 20px;
@@ -16,6 +16,14 @@
     overflow: hidden; /* To prevent content overflow */
     font-family: 'Mate SC', serif; /* Apply imported font */
 
+}
+.header_main p,h1{
+    color: white;
+    padding-left: 10%;
+}
+
+.header_main p{
+    font-size: xx-large;
 }
 
 /* Style for the video to act as a background */
@@ -29,12 +37,12 @@
     /* Places the video behind other content */
 }
 
-.left, .right {
+.left {
     z-index: 1; /* Ensures content stays above the video */
     color: white; /* Adjust content color to contrast with the video */
     position: relative;
-    width: 50%;
-    text-align: center;
+    width: 100%;
+   
     display: flex;
 }
 
@@ -79,3 +87,114 @@
     transform: scale(1.05); /* Slight zoom on hover */
     opacity: 1; /* Full opacity on hover */
 }
+/* Marquee Text */
+.marquee {
+    position: absolute;
+    bottom: 70px; /* Adjust this to position it correctly */
+    width: 100%;
+    height: 70px;
+    background-color: goldenrod;
+    overflow: hidden; /* Hide the overflow to make the text scroll in */
+    white-space: nowrap;
+    z-index: 999; /* Ensures it appears above the video */
+}
+
+.marquee span {
+    display: inline-block;
+    padding-left: 100%; /* Start the animation off-screen */
+    font-size: 2rem;
+    color: black;
+    font-weight: bold;
+    animation: marquee 50s linear infinite;
+}
+
+
+
+
+
+
+
+
+
+  
+
+
+
+/* Marquee keyframes */
+@keyframes marquee {
+    0% {
+        transform: translateX(100%); /* Start from the right side */
+    }
+    100% {
+        transform: translateX(-100%); /* End on the left side */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+.wrapper{
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+}
+
+a{
+  display: block;
+  width: 250px;
+  height: 50px;
+  line-height: 46px;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 50px;
+  border: 3px solid seagreen;
+  color: seagreen;
+  font-size: 20px;
+  font-family: arial;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  text-transform: uppercase;
+  transition: all .35s;
+}
+
+a:before,
+a:after{
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  background: seagreen;
+  z-index: -1;
+  transition: all .35s;
+}
+
+a:before{
+  opacity: .5;
+}
+
+a:after{
+  transition-delay: .2s;
+}
+
+a:hover{
+  color: #fff;
+}
+
+a:hover:before,
+a:hover:after{
+  top: 0;
+} */
