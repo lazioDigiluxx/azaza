@@ -1,11 +1,13 @@
 .footerMain {
   width: 100%;
-  padding: 50px 0;
+  padding: 40px 0;
   background-color: #333;
   color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 400px;
+  /* justify-content: space-around; */
 }
 
 .footerContent {
@@ -13,13 +15,13 @@
   justify-content: space-around;
   width: 90%;
   max-width: 1200px;
+  flex-wrap: wrap; /* Ensure it wraps on smaller screens */
 }
 
-.firstFooter,
-.secondFooter,
-.thirdFooter {
+.firstFooter, .secondFooter, .thirdFooter {
   flex: 1;
   padding: 20px;
+  min-width: 250px; /* Ensures columns don’t get too narrow */
 }
 
 .logoContainer {
@@ -33,43 +35,36 @@
   height: auto;
 }
 
-.logoImg {
-    width: 120px;
-    height: auto;
-  }
-  
 .socialMedia ul {
-  display: flex;
-  justify-content: center;
+  /* display: flex; */
+  /* justify-content: left; */
   list-style: none;
-  gap: 20px;
+  gap: 1px;
 }
 
 .socialMedia ul li a {
   color: white;
   font-size: 24px;
-  transition: color 0.3s ease;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .socialMedia ul li a:hover {
-  color: white;
+  color: #ad750b;
+  transform: scale(1.1); /* Adds a subtle zoom effect */
 }
 
-.secondFooter h4,
-.thirdFooter h4 {
+.secondFooter h4, .thirdFooter h4 {
   font-size: 18px;
   margin-bottom: 10px;
   color: white;
 }
 
-.secondFooter ul,
-.thirdFooter ul {
+.secondFooter ul, .thirdFooter ul {
   list-style: none;
   padding: 0;
 }
 
-.secondFooter ul li,
-.thirdFooter p {
+.secondFooter ul li, .thirdFooter p {
   color: #bbb;
   font-size: 16px;
   line-height: 1.8;
@@ -87,45 +82,94 @@
 }
 
 .bottomFooter p {
-    text-align: center;
   margin: 0;
 }
-.whatsapp_fix_img {
-  width: 50%;
-  position: absolute;
+
+/* Floating WhatsApp and Call Button Styling */
+.whatsapp_fix_img, .call_fix_img {
+  width: 35px;
+  height: 35px;
   border-radius: 50%;
-  font-size: 50px !important;
   animation: pulse 2s infinite;
 }
-.call_fix_img{
-    width: 50%;
-    position: absolute;
-    border-radius: 50%;
-    font-size: 50px !important;
-    animation: pulse 2s infinite;
+
+.w_app, .callButton {
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  z-index: 999;
 }
-.w_app{
-    /* background-color: #e4e4e4; */
-    border-radius: 15px;
-    display: flex;
+
+.w_app {
+  bottom: 20%;
+  left: 10px;
+}
+
+.callButton {
+  bottom: 10%;
+  left: 10px;
+}
+
+/* Media Queries for Responsiveness */
+
+/* For Tablets */
+@media (max-width: 768px) {
+  .footerContent {
+    flex-direction: column;
     align-items: center;
-    width: 115px;
-    height: 38px;
-    position: fixed;
-    bottom: 14%;
-    z-index: 999;
-    left:0;
   }
 
-  .callButton{
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
-    width: 115px;
-    height: 38px;
-    position: fixed;
-    bottom: 20%;
-    z-index: 999;
-    /* right:-50px; */
-    left: 0;
+  .firstFooter, .secondFooter, .thirdFooter {
+    padding: 10px;
   }
+
+  .socialMedia ul {
+    gap: 15px;
+  }
+
+  .whatsapp_fix_img, .call_fix_img {
+    width: 30px;
+    height: 30px;
+  }
+
+  .w_app, .callButton {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+/* For Mobile Devices */
+@media (max-width: 480px) {
+  .footerContent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footerMain {
+    padding: 30px 10px;
+  }
+
+  .firstFooter, .secondFooter, .thirdFooter {
+    padding: 10px;
+  }
+
+  .socialMedia ul {
+    gap: 1px;
+  }
+
+  .whatsapp_fix_img, .call_fix_img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .w_app, .callButton {
+    width: 45px;
+    height: 45px;
+  }
+}

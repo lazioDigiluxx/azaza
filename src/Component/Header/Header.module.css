@@ -1,200 +1,202 @@
-
-
 @import url('https://fonts.googleapis.com/css2?family=Mate+SC&display=swap');
-
-
 
 .header_main {
     position: relative;
     height: 97vh;
     width: 100%;
-    /* display: flex; */
+    display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
     box-sizing: border-box;
-    overflow: hidden; /* To prevent content overflow */
-    font-family: 'Mate SC', serif; /* Apply imported font */
-
+    overflow: hidden;
+    font-family: 'Mate SC', serif;
+    flex-wrap: wrap;
 }
-.header_main p,h1{
+
+.header_main p, h1 {
     color: white;
     padding-left: 10%;
 }
 
-.header_main p{
+.header_main p {
     font-size: xx-large;
 }
 
-/* Style for the video to act as a background */
 .background_video {
     position: absolute;
-    top: 1%;
-    left: 20%;
+    top: 50px;
+    left: 200px;
+    right: 0;
     width: 100%;
     height: 100%;
-     /* Ensures video covers the entire container without distortion */
-    /* Places the video behind other content */
+    object-fit: cover;
+    z-index: 0;
 }
 
 .left {
-    z-index: 1; /* Ensures content stays above the video */
-    color: white; /* Adjust content color to contrast with the video */
+    z-index: 1;
+    color: white;
     position: relative;
-    width: 100%;
-   
-    display: flex;
+    width: 60%;
 }
 
-
-
-.right button{
-    opacity: 0.5;
-    border-radius: 2rem;
-    
-    
+.left h1 {
+    font-size: 3rem;
 }
 
 .right {
     z-index: 1;
-    color: white;
     position: relative;
-    width: 50%;
+    width: 40%;
     text-align: center;
     display: flex;
-    flex-direction: column; /* Stack buttons vertically */
-    justify-content: center; /* Center buttons vertically */
-    align-items: center; /* Center buttons horizontally */
-    gap: 20px; /* Adds space between the buttons */
+    justify-content: center;
+    align-items: center;
 }
 
-.right button {
-    opacity: 0.9; /* Slightly transparent buttons */
-    border-radius: 2rem; /* Rounded corners */
-    padding: 15px 30px; /* Adjust padding for size */
-    font-size: 1.2rem; /* Larger font for the buttons */
-    width: 80%; /* Consistent button width */
-    background-color: rgba(255, 255, 255, 0.2); /* Transparent background */
-    color: white; /* White text color */
-    border: 2px solid white; /* Add a white border */
-    transition: all 0.3s ease-in-out; /* Smooth hover transition */
-    cursor: pointer;
+.right img {
+    max-width: 50%;
+    height: auto;
+    margin-right: 590px;
 }
 
-/* Add hover effect for better interactivity */
-.right button:hover {
-    background-color: rgba(255, 255, 255, 0.5); /* Change background on hover */
-    transform: scale(1.05); /* Slight zoom on hover */
-    opacity: 1; /* Full opacity on hover */
+a {
+    display: block;
+    width: 250px;
+    height: 50px;
+    line-height: 46px;
+    text-decoration: none;
+    text-align: center;
+    border-radius: 50px;
+    background: transparent;
+    text-transform: uppercase;
+    transition: all 0.35s;
 }
-/* Marquee Text */
+
 .marquee {
     position: absolute;
-    bottom: 70px; /* Adjust this to position it correctly */
+    bottom: 0;
     width: 100%;
-    height: 70px;
+    height: 50px;
     background-color: goldenrod;
-    overflow: hidden; /* Hide the overflow to make the text scroll in */
+    overflow: hidden;
     white-space: nowrap;
-    z-index: 999; /* Ensures it appears above the video */
+    z-index: 99;
+    padding: 10px 0;
 }
 
 .marquee span {
     display: inline-block;
-    padding-left: 100%; /* Start the animation off-screen */
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: black;
     font-weight: bold;
-    animation: marquee 50s linear infinite;
+    animation: marquee 20s linear infinite;
 }
 
-
-
-
-
-
-
-
-
-  
-
-
-
-/* Marquee keyframes */
 @keyframes marquee {
     0% {
-        transform: translateX(100%); /* Start from the right side */
+        transform: translateX(100%);
     }
     100% {
-        transform: translateX(-100%); /* End on the left side */
+        transform: translateX(-100%);
     }
 }
 
+/* Media Queries for Responsiveness */
 
+/* For tablets and smaller screens */
+@media (max-width: 1024px) {
+    .header_main {
+        flex-direction: column;
+        height: auto;
+    }
 
+    .left {
+        width: 100%;
+        text-align: center;
+    }
 
+    .left h1 {
+        font-size: 2.5rem;
+    }
 
+    .right {
+        width: 100%;
+        margin-top: 20px; /* Adds space between logo and text */
+    }
 
+    .right img {
+        margin-right: 0; /* Center the logo */
+        max-width: 40%; /* Adjust logo size */
+    }
 
+    .marquee {
+        height: 40px;
+    }
 
+    .marquee span {
+        font-size: 1.2rem;
+    }
 
-
-
-/* 
-
-.wrapper{
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 999;
+    a {
+        width: 200px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 18px;
+    }
 }
 
-a{
-  display: block;
-  width: 250px;
-  height: 50px;
-  line-height: 46px;
-  text-decoration: none;
-  text-align: center;
-  border-radius: 50px;
-  border: 3px solid seagreen;
-  color: seagreen;
-  font-size: 20px;
-  font-family: arial;
-  position: relative;
-  overflow: hidden;
-  background: transparent;
-  text-transform: uppercase;
-  transition: all .35s;
+/* For mobile screens (below 768px) */
+@media (max-width: 768px) {
+    .header_main {
+        padding: 100px;
+    }
+
+    .background_video {
+        object-fit: fill;
+        top: 0;
+    }
+
+    .left h1 {
+        font-size: 2rem;
+    }
+
+    .right img {
+        max-width: 30%; /* Shrink the logo further */
+    }
+
+    a {
+        width: 180px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 16px;
+    }
+
+    .marquee {
+        height: 30px;
+    }
+
+    .marquee span {
+        font-size: 1rem;
+    }
 }
 
-a:before,
-a:after{
-  position: absolute;
-  content: "";
-  width: 100%;
-  height: 100%;
-  top: -100%;
-  left: 0;
-  background: seagreen;
-  z-index: -1;
-  transition: all .35s;
-}
+/* For small mobile screens (below 576px) */
+@media (max-width: 576px) {
+    .left h1 {
+        font-size: 1.5rem; /* Further reduce text size */
+    }
 
-a:before{
-  opacity: .5;
-}
+    .right img {
+        max-width: 30%; /* Further shrink logo */
+    }
 
-a:after{
-  transition-delay: .2s;
-}
+    .marquee {
+        height: 25px;
+    }
 
-a:hover{
-  color: #fff;
+    .marquee span {
+        font-size: 0.9rem;
+    }
 }
-
-a:hover:before,
-a:hover:after{
-  top: 0;
-} */

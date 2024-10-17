@@ -10,6 +10,7 @@ const Home = () => {
   return (
     <div className={styles.main}>
         <NavBar/>
+        <br/>
         <Header/>
         <AboutUs/>
         <Service/>

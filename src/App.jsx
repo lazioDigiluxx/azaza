@@ -16,6 +16,7 @@ function App() {
         <ParticlesComponent id="particles" style={{zIndex:"999", objectFit: 'cover'}} />
         <BrowserRouter>
             <Routes>
+              
                 <Route path="/" element={<Home />} />
                 <Route path='/About' element={<AboutUs/>}/>
                 <Route path='/Contact' element={<Contact/>} />

@@ -3,6 +3,7 @@ import styles from "./Header.module.css";
 import backgroundVideo from "./../../assets/Images/backVideo.mp4";
 import MovingComponent from "react-moving-text";
 import { TypeAnimation } from "react-type-animation";
+import logo from "./../../assets/Images/logo.png"
 
 const Header = () => {
   return (
@@ -11,13 +12,12 @@ const Header = () => {
         <source src={backgroundVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
-       <p>azaza</p>
+      {/* <p>azaza</p> */}
       <div className={styles.left}>
-      
         <h1>
-        One-Stop Solutions for 
-         
-          <br/><span style={{ display: "inline-block" }}>
+          One-Stop Solutions for
+          <br />
+          <span style={{ display: "inline-block" }}>
             <TypeAnimation
               sequence={[
                 "Web Development",
@@ -32,70 +32,28 @@ const Header = () => {
               style={{ fontSize: "1.5em", marginLeft: "10px", color: "white" }}
               repeat={Infinity}
             />
-          </span>{" "}<br/>
+          </span>{" "}
+          <br />
           Needs!!
         </h1>
       </div>
-      {/* <div className={styles.right}>
-        <button>
-          <MovingComponent
-            type="slideInFromLeft"
-            duration="1000ms"
-            delay="0s"
-            direction="normal"
-            timing="ease"
-            iteration="2"
-            fillMode="none"
-            style={{ fontSize: "3rem" }}
-          >
-            Web Solutions
-          </MovingComponent>
-        </button>
-        <button>
-          <MovingComponent
-            type="slideInFromRight"
-            duration="1000ms"
-            delay="0s"
-            direction="normal"
-            timing="ease"
-            iteration="2"
-            fillMode="none"
-            style={{ fontSize: "3rem" }}
-          >
-            SEO Solutions
-          </MovingComponent>
-        </button>
-        <button>
-          <MovingComponent
-            type="slideInFromLeft"
-            duration="1000ms"
-            delay="0s"
-            direction="normal"
-            timing="ease"
-            iteration="2"
-            fillMode="none"
-            style={{ fontSize: "3rem" }}
-          >
-            Digital Marketing Solutions
-          </MovingComponent>
-        </button>
-      </div> */}
 
-      <div className={styles.wrapper}>
-        <a href="#">Explore Us</a>
+      <div className={styles.right}>
+        <img src={logo} alt="Logo" />
       </div>
+
+
 
       {/* Marquee Text */}
       <div className={styles.marquee}>
         <span>
-          Digital Marketing &nbsp; | &nbsp; Web Solutions &nbsp; | &nbsp; SEO |
           Digital Marketing &nbsp; | &nbsp; Web Solutions &nbsp; | &nbsp; SEO
-          Digital Marketing &nbsp; | &nbsp; Web Solutions &nbsp; | &nbsp; SEO|
-          Digital Marketing &nbsp; | &nbsp; Web Solutions &nbsp; | &nbsp; SEO
-          Solutions
+          &nbsp; | &nbsp; Digital Marketing &nbsp; | &nbsp; Web Solutions &nbsp;
+          | &nbsp; SEO &nbsp; | &nbsp; Digital Marketing &nbsp; | &nbsp; Web
+          Solutions &nbsp; | &nbsp; SEO &nbsp; | &nbsp; Digital Marketing &nbsp;
+          | &nbsp; Web Solutions &nbsp; | &nbsp; SEO &nbsp; | &nbsp;
         </span>
       </div>
-      
     </div>
   );
 };

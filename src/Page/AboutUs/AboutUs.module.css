@@ -7,6 +7,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between; /* Align child elements */
+    padding: 20px; /* Add some padding for smaller screens */
 }
 
 .heroSection {
@@ -15,22 +16,21 @@
     justify-content: center;
     align-items: center; /* Centers content horizontally */
     text-align: center;
-    padding: 60px 20px; /* Padding for spacing */
     background-color: black;
-    min-height: 70vh; /* Takes up 70% of the viewport height */
+    /* min-height: 70vh;  */
 }
 
 .heading {
-    font-size: 3.5rem;
+    font-size: 3rem; /* Adjusted for responsiveness */
     color: #fff;
     font-weight: bold;
-    margin-bottom: 20px; /* Spacing below the heading */
+   /* Spacing below the heading */
     line-height: 1.3;
     letter-spacing: 1.5px;
 }
 
 .subText {
-    font-size: 1.2rem;
+    font-size: 1rem; /* Reduced font-size for smaller screens */
     color: #ddd;
     margin-top: 15px;
     max-width: 700px;
@@ -84,4 +84,41 @@ button {
 button:hover {
     background-color: #ad750b;
     color: black;
+}
+
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+
+/* For tablets */
+@media (max-width: 768px) {
+    .heading {
+        font-size: 2.5rem;
+    }
+    .subText {
+        font-size: 1rem;
+        padding: 0 10px;
+    }
+    .cardsContainer {
+        gap: 30px; /* Reduced gap */
+    }
+}
+
+/* For mobile devices */
+@media (max-width: 480px) {
+    .heroSection {
+        padding: 40px 15px; /* Less padding for smaller screens */
+    }
+    .heading {
+        font-size: 2rem; /* Smaller font for mobile */
+    }
+    .subText {
+        font-size: 0.9rem; /* Smaller subtext */
+    }
+    button {
+        padding: 8px 15px; /* Smaller button padding */
+        font-size: 1rem;
+    }
+    .cardsContainer {
+        flex-direction: column; /* Stack cards vertically on mobile */
+        gap: 20px; /* Reduced gap */
+    }
 }
