@@ -41,7 +41,6 @@ const Contact = () => {
             <label htmlFor="message" >Message *</label>
             <textarea id="message" name="message" required></textarea>
           </div>
-          <button type="submit" className={styles.send_button}>Submit</button>
         </form>
       </div>
     </div>
